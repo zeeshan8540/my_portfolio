@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html class="dark" lang="en">
 <head>
     <meta charset="utf-8"/>
@@ -20,9 +20,14 @@
 <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#education">Education</a>
 <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#skills">Skills</a>
 <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#projects">Projects</a>
+<a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#exposure">Experience</a>
 <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#resume">Resume</a>
 <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#contact">Contact</a>
 </div>
+<button id="theme-toggle" type="button" class="inline-flex items-center gap-2 rounded-xl border border-outline-variant bg-surface-container px-4 py-2 text-on-surface-variant hover:text-primary transition-colors duration-200">
+                <span class="material-symbols-outlined text-base">dark_mode</span>
+                Toggle Theme
+            </button>
 <a class="shimmer-btn bg-primary text-on-primary px-6 py-2 rounded-lg font-bold active:scale-95 transition-transform hover:opacity-90" href="#contact">
                 Contact Me
             </a>
@@ -81,7 +86,7 @@
 <p class="font-label-mono text-label-mono text-on-surface-variant uppercase">Years Coding</p>
 </div>
 <div class="text-center">
-<p class="font-display text-headline-lg text-primary">12</p>
+<p class="font-display text-headline-lg text-primary">2</p>
 <p class="font-label-mono text-label-mono text-on-surface-variant uppercase">Projects Completed</p>
 </div>
 <div class="text-center">
@@ -245,21 +250,99 @@
 <!-- 5. Projects Section -->
 <section class="py-section-gap px-gutter max-w-container-max mx-auto" id="projects">
 <div class="mb-16 reveal">
-<h2 class="font-display text-display mb-4">Currently <span class="text-primary">Working On</span></h2>
+<span class="section-tag">Portfolio</span>
+<h2 class="font-display text-display mb-4">Projects</h2>
 <p class="text-on-surface-variant max-w-2xl font-body-lg text-body-lg">
-                    This section highlights my current mobile application work, built with Flutter and Dart and backed by Firebase for realtime functionality.
-                </p>
+          A concise showcase of the work I’m shipping today and the products I’m designing for the future.
+        </p>
 </div>
-<div class="grid grid-cols-1 gap-8">
-<div class="glass-card p-10 rounded-3xl border border-outline-variant reveal">
-<h3 class="font-headline-lg text-headline-lg mb-4">Mobile Application Project</h3>
-<p class="text-on-surface-variant leading-relaxed max-w-2xl">
-                        I’m currently working on a mobile application project using Flutter and Dart, focused on building a smooth UX with Firebase-powered realtime functionality.
-                    </p>
+<div id="projects-grid" class="grid grid-cols-1 gap-8 md:grid-cols-2">
+
+  <!-- Project 1 -->
+    <article class="project-card reveal" data-category="fullstack">
+      <div class="aspect-[16/9] overflow-hidden bg-surface-container relative">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6D8Lp7U8U5anl3nxC8SfurjcZARuH9lp6Z0JRZQfs-kweXe4nJ3wwTZMA53rh_w9lpftkQ_p9XV3zEW-QLLrpaJ7iMpj4J-ha5HH6jTRspyzLqvsB9MkF0151TDZhUdDPqf3ZHUGOEaQf032qV7HtTpt42Iqm8sHzWkqyvAi7Kgeovfs-XLzeN0mkGB5bWwbYc_vcS4PCV2MMLlg4WcnSBzvbC6WV42iNI6gKYyEIO15EtZxd9UNqGKNhUUMAMUCAC1LvwXO9otBQ"
+             alt="Nebula CRM Engine dashboard screenshot" class="w-full h-full object-cover block" />
+        <div class="absolute inset-0 bg-gradient-to-t from-surface/70 to-transparent"></div>
+      </div>
+      <div class="p-10 flex flex-col flex-1">
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="skill-pill">HTML</span>
+          <span class="skill-pill">CSS</span>
+          <span class="skill-pill">JavaScript</span>
+        </div>
+        <h3 class="font-headline-md text-headline-md mb-3 text-on-background">GaraFour</h3>
+        <p class="text-on-surface-variant leading-relaxed mb-4">GaraFour official website — a responsive marketing site showcasing services and products. Visit the live site to explore features and contact details.</p>
+        <ul class="text-on-surface-variant text-body-md space-y-2 mb-6 pl-5 list-disc">
+          <li>Reduced query latency by 68% with intelligent caching.</li>
+          <li>WebSocket sync across 1000+ concurrent users.</li>
+        </ul>
+        <div class="mt-auto grid gap-3 sm:grid-cols-2">
+          <a href="https://garafour.com/" target="_blank" rel="noopener noreferrer" class="btn-primary justify-center py-3 text-sm" aria-label="Visit GaraFour live website">
+            <span class="material-symbols-outlined" aria-hidden="true">rocket_launch</span> Live website
+          </a>
+          <a href="https://github.com/garafour" target="_blank" rel="noopener noreferrer" class="btn-ghost justify-center py-3 text-sm" aria-label="View GaraFour on GitHub">
+            <span class="material-symbols-outlined" aria-hidden="true">code</span> GitHub
+          </a>
+        </div>
+      </div>
+    </article>
+    
+    <!-- Currently Working On -->
+    <article class="project-card reveal" style="transition-delay:80ms">
+      <div class="aspect-[16/9] overflow-hidden bg-surface-container relative">
+        <img src="travel_wise.png" alt="Travel Wise mobile app screenshot" class="w-full h-full object-cover object-top block" />
+        <div class="absolute inset-0 bg-gradient-to-t from-surface/70 to-transparent"></div>
+      </div>
+      <div class="p-10 flex flex-col flex-1 justify-center items-center text-center">
+        <div class="mb-6">
+          <span class="material-symbols-outlined text-6xl text-primary">phone_iphone</span>
+        </div>
+        <p class="font-label-mono text-label-mono uppercase tracking-[0.35em] text-primary mb-4">Currently working on</p>
+        <h3 class="font-headline-md text-headline-md text-on-background mb-4">TravelWise</h3>
+        <p class="text-on-surface-variant leading-relaxed">
+          Building a cross-platform mobile app with Flutter, Firebase realtime collaboration, and a polished UX for modern users.
+        </p>
+        <div class="mt-6 inline-flex items-center gap-3 rounded-full bg-primary/10 px-5 py-3 text-primary font-semibold">
+          <span class="material-symbols-outlined">check_circle</span>
+          In Progress
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+<!-- 6. Professional Exposure Section -->
+<section class="py-section-gap px-gutter max-w-container-max mx-auto" id="exposure">
+<div class="mb-16 reveal">
+<span class="section-tag">Experience</span>
+<h2 class="font-display text-display mb-4">Professional <span class="text-primary">Exposure</span></h2>
+<p class="text-on-surface-variant max-w-2xl font-body-lg text-body-lg">Insights and experiences from my recent professional visits and industry interactions.</p>
 </div>
+<div class="grid grid-cols-1 gap-8 md:grid-cols-1">
+  <!-- Folio3 Visit -->
+  <article class="rounded-2xl border border-outline-variant bg-surface-container-high p-8 md:p-12 reveal">
+    <div class="flex flex-col md:flex-row gap-8 items-start">
+      <div class="flex-1">
+        <div class="flex items-center gap-3 mb-6">
+          <span class="material-symbols-outlined text-4xl text-primary">location_on</span>
+          <div>
+            <p class="font-label-mono text-label-mono uppercase tracking-[0.2em] text-primary">Recent Visit</p>
+            <h3 class="font-headline-md text-headline-md text-on-background">Folio3</h3>
+          </div>
+        </div>
+        <p class="text-on-surface-variant leading-relaxed mb-6 font-body-lg text-body-lg">Recently visited Folio3's offices to collaborate with their talented team and explore cutting-edge development practices. Gained valuable insights into their innovative approach to software engineering and product development.</p>
+        <div class="flex flex-wrap gap-3">
+          <span class="skill-pill">Professional Networking</span>
+          <span class="skill-pill">Team Collaboration</span>
+          <span class="skill-pill">Best Practices</span>
+        </div>
+      </div>
+    </div>
+  </article>
 </div>
 </section>
-<!-- 6. Resume Section -->
+<!-- 7. Resume Section -->
 <section class="py-section-gap px-gutter max-w-container-max mx-auto" id="resume">
 <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6 reveal">
 <div class="max-w-2xl">
@@ -284,7 +367,7 @@
 </div>
 </div>
 <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-outline-variant">
-<img alt="Zeeshan Arshad" class="w-full h-full object-cover" src="Zeeshan.jpg"/>
+<img alt="Zeeshan Arshad" class="w-full h-full object-cover object-top" src="Zeeshan.jpg"/>
 </div>
 </div>
 </header>

@@ -230,13 +230,53 @@ const updateActiveNavLink = () => {
     }
 };
 
+const themeToggleBtn = document.getElementById('theme-toggle');
+
+const setTheme = (theme) => {
+    const isLight = theme === 'light';
+    document.documentElement.classList.toggle('dark', !isLight);
+    document.documentElement.classList.toggle('light', isLight);
+    if (themeToggleBtn) {
+        themeToggleBtn.innerHTML = `
+            <span class="material-symbols-outlined text-base">${isLight ? 'light_mode' : 'dark_mode'}</span>
+            ${isLight ? 'Light Mode' : 'Dark Mode'}
+        `;
+    }
+    localStorage.setItem('theme', theme);
+};
+
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'light' || savedTheme === 'dark') {
+    setTheme(savedTheme);
+} else {
+    const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+    setTheme(prefersLight ? 'light' : 'dark');
+}
+
+themeToggleBtn?.addEventListener('click', () => {
+    const currentTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+    setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+});
+
 window.addEventListener('scroll', updateActiveNavLink);
 window.addEventListener('load', updateActiveNavLink);
 
 // Ensure the initial active state is applied on page load or refresh.
 window.dispatchEvent(new Event('scroll'));
 
-// 5. Contact form submission
+// 5. Project filtering
+function filterProjects(btn, category) {
+    document.querySelectorAll('.filter-btn').forEach(el => el.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('#projects-grid article').forEach(card => {
+        const isMatch = category === 'all' || card.dataset.category === category;
+        card.style.opacity = isMatch ? '1' : '0.25';
+        card.style.transform = isMatch ? 'scale(1)' : 'scale(0.97)';
+        card.style.pointerEvents = isMatch ? 'auto' : 'none';
+    });
+}
+
+// 6. Contact form submission
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
