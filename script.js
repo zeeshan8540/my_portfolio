@@ -281,17 +281,46 @@ const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
-        const btn = e.target.querySelector('button');
+        const form = e.target;
+        const btn = form.querySelector('button');
         const originalText = btn.innerHTML;
+        
         btn.disabled = true;
         btn.innerHTML = '<span class="material-symbols-outlined animate-spin">progress_activity</span> Sending...';
-        setTimeout(() => {
-            btn.innerHTML = '<span class="material-symbols-outlined">check_circle</span> Sent!';
-            e.target.reset();
+
+        const data = new FormData(form);
+        fetch(form.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                btn.innerHTML = '<span class="material-symbols-outlined">check_circle</span> Sent!';
+                form.reset();
+            } else {
+                response.json().then(data => {
+                    if (Object.hasOwnProperty.call(data, 'errors')) {
+                        btn.innerHTML = '<span class="material-symbols-outlined">error</span> Error';
+                        alert(data["errors"].map(error => error["message"]).join(", "));
+                    } else {
+                        btn.innerHTML = '<span class="material-symbols-outlined">error</span> Error';
+                        alert("Oops! There was a problem submitting your form");
+                    }
+                });
+            }
+        })
+        .catch(error => {
+            btn.innerHTML = '<span class="material-symbols-outlined">error</span> Error';
+            alert("Oops! There was a problem submitting your form");
+        })
+        .finally(() => {
             setTimeout(() => {
                 btn.innerHTML = originalText;
                 btn.disabled = false;
             }, 3000);
-        }, 1500);
+        });
     });
 }
