@@ -1,670 +1,1015 @@
 <!DOCTYPE html>
 <html class="dark" lang="en">
+
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Zeeshan Arshad | Portfolio</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="style.css"/>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Zeeshan Arshad | Developer & Amazon Account Manager</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+
 <body class="selection:bg-primary/30 selection:text-primary overflow-x-hidden">
-<canvas id="star-field"></canvas>
-<!-- 1. Sticky Navigation Bar -->
-<header class="fixed top-0 w-full bg-background/80 backdrop-blur-md z-50 border-b border-outline-variant">
-<nav class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
-<div class="font-headline-md text-headline-md font-bold text-on-background">Zeeshan Arshad</div>
-<div class="hidden md:flex items-center gap-8">
-<a class="nav-link text-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md" href="#home">Home</a>
-<a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#education">Education</a>
-<a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#skills">Skills</a>
-<a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#projects">Projects</a>
-<a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#exposure">Experience</a>
-<a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#resume">Resume</a>
-<a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#contact">Contact</a>
-</div>
-<button id="theme-toggle" type="button" class="inline-flex items-center gap-2 rounded-xl border border-outline-variant bg-surface-container px-4 py-2 text-on-surface-variant hover:text-primary transition-colors duration-200">
-                <span class="material-symbols-outlined text-base">dark_mode</span>
-                Toggle Theme
-            </button>
-<a class="shimmer-btn bg-primary text-on-primary px-6 py-2 rounded-lg font-bold active:scale-95 transition-transform hover:opacity-90" href="#contact">
-                Contact Me
+  <canvas id="star-field"></canvas>
+  <!-- 1. Sticky Navigation Bar -->
+  <header class="fixed top-0 w-full bg-background/80 backdrop-blur-md z-50 border-b border-outline-variant">
+    <nav class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+      <div class="font-headline-md text-headline-md font-bold text-on-background">Zeeshan Arshad</div>
+      <div class="hidden md:flex items-center gap-8">
+        <a class="nav-link text-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md"
+          href="#home">Home</a>
+        <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md"
+          href="#education">Education</a>
+        <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md"
+          href="#skills">Skills</a>
+        <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md"
+          href="#projects">Projects</a>
+        <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md"
+          href="#exposure">Experience</a>
+        <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md"
+          href="#resume">Resume</a>
+        <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md"
+          href="#contact">Contact</a>
+      </div>
+      <button id="theme-toggle" type="button"
+        class="inline-flex items-center gap-2 rounded-xl border border-outline-variant bg-surface-container px-4 py-2 text-on-surface-variant hover:text-primary transition-colors duration-200">
+        <span class="material-symbols-outlined text-base">dark_mode</span>
+        Toggle Theme
+      </button>
+      <a class="shimmer-btn bg-primary text-on-primary px-6 py-2 rounded-lg font-bold active:scale-95 transition-transform hover:opacity-90"
+        href="#contact">
+        Contact Me
+      </a>
+    </nav>
+  </header>
+  <main>
+    <!-- 2. Hero Section -->
+    <section class="pt-40 pb-section-gap px-gutter max-w-container-max mx-auto" id="home">
+      <div class="flex flex-col lg:flex-row items-center gap-16">
+        <div class="flex-1 space-y-8">
+          <div
+            class="reveal active inline-flex items-center gap-2 bg-secondary-container/30 px-3 py-1 rounded-full border border-outline-variant/30">
+            <span class="material-symbols-outlined text-primary text-sm"
+              style="font-variation-settings: 'FILL' 1;">terminal</span>
+            <span class="font-label-mono text-label-mono text-primary uppercase">Available for hire</span>
+          </div>
+          <h1 class="font-display text-display text-on-background reveal active">
+            Building Robust <br />
+            <span class="text-primary typing-cursor" id="typing-text">Digital Solutions</span>
+          </h1>
+          <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl reveal active"
+            style="transition-delay: 100ms">
+            I am a Computer Science student and Software Developer passionate about creating performant, scalable
+            applications.
+          </p>
+          <div class="flex flex-wrap gap-4 pt-4 reveal active" style="transition-delay: 200ms">
+            <a class="shimmer-btn bg-primary text-on-primary font-bold px-8 py-4 rounded-xl flex items-center gap-2 hover:shadow-[0_0_20px_rgba(59,130,246,0.2)] transition-all duration-300"
+              href="#projects">
+              View Projects
+              <span class="material-symbols-outlined">arrow_forward</span>
             </a>
-</nav>
-</header>
-<main>
-<!-- 2. Hero Section -->
-<section class="pt-40 pb-section-gap px-gutter max-w-container-max mx-auto" id="home">
-<div class="flex flex-col lg:flex-row items-center gap-16">
-<div class="flex-1 space-y-8">
-<div class="reveal active inline-flex items-center gap-2 bg-secondary-container/30 px-3 py-1 rounded-full border border-outline-variant/30">
-<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">terminal</span>
-<span class="font-label-mono text-label-mono text-primary uppercase">Available for hire</span>
-</div>
-<h1 class="font-display text-display text-on-background reveal active">
-                        Building Robust <br/>
-<span class="text-primary typing-cursor" id="typing-text">Digital Solutions</span>
-</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl reveal active" style="transition-delay: 100ms">
-                        I am a Computer Science student and Software Developer passionate about creating performant, scalable applications.
-                    </p>
-<div class="flex flex-wrap gap-4 pt-4 reveal active" style="transition-delay: 200ms">
-<a class="shimmer-btn bg-primary text-on-primary font-bold px-8 py-4 rounded-xl flex items-center gap-2 hover:shadow-[0_0_20px_rgba(59,130,246,0.2)] transition-all duration-300" href="#projects">
-                            View Projects
-                            <span class="material-symbols-outlined">arrow_forward</span>
-</a>
-<a class="border border-outline-variant text-on-background font-bold px-8 py-4 rounded-xl hover:bg-surface-variant transition-colors duration-300" href="#resume">
-                            Download CV
-                        </a>
-</div>
-</div>
-<div class="relative w-full lg:w-1/2 flex justify-center lg:justify-end reveal active">
-<div class="relative w-72 h-72 md:w-96 md:h-96 floating-hero">
-<div class="absolute -inset-4 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
-<div class="relative z-10 w-full h-full rounded-3xl overflow-hidden border-2 border-outline-variant bg-surface-container shadow-2xl">
-<img alt="Zeeshan Arshad" class="w-full h-full object-cover object-top" src="Zeeshan.png"/>
-</div>
-<div class="absolute -bottom-6 -left-6 z-20 glass-card p-4 rounded-2xl shadow-xl hidden md:block">
-<div class="flex items-center gap-3">
-<div class="bg-primary/20 p-2 rounded-lg">
-<span class="material-symbols-outlined text-primary">code</span>
-</div>
-<div>
-<p class="font-label-mono text-label-mono text-on-surface-variant">Top Skills</p>
-<p class="font-headline-md text-headline-md font-bold text-on-background">Flutter &amp; Dart</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="mt-24 bg-surface-container-low py-16 border-y border-outline-variant rounded-3xl reveal">
-<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-<div class="text-center">
-<p class="font-display text-headline-lg text-primary">4+</p>
-<p class="font-label-mono text-label-mono text-on-surface-variant uppercase">Years in Tech</p>
-</div>
-<div class="text-center">
-<p class="font-display text-headline-lg text-primary">3</p>
-<p class="font-label-mono text-label-mono text-on-surface-variant uppercase">Projects Completed</p>
-</div>
-<div class="text-center">
-<p class="font-display text-headline-lg text-primary">Active</p>
-<p class="font-label-mono text-label-mono text-on-surface-variant uppercase">App Support &amp; Triage</p>
-</div>
-<div class="text-center">
-<p class="font-display text-headline-lg text-primary">BS CS</p>
-<p class="font-label-mono text-label-mono text-on-surface-variant uppercase">Degree Awaited</p>
-</div>
-</div>
-</div>
-</section>
-<!-- 3. Education Section -->
-<section class="py-section-gap px-gutter max-w-container-max mx-auto" id="education">
-<header class="mb-section-gap reveal">
-<h2 class="font-display text-display mb-4">Academic <span class="text-primary">Path</span></h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
-                    A journey defined by continuous learning, technical discipline, and a passion for engineering high-performance software solutions.
-                </p>
-</header>
-<div class="relative grid grid-cols-1 md:grid-cols-12 gap-gutter">
-<div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-[1px] timeline-line transform -translate-x-1/2"></div>
-
-<!-- 1. BS Computer Science (Left) -->
-<div class="md:col-span-5 mb-12 md:mb-24 flex flex-col items-end text-right reveal">
-<div class="relative w-full group">
-<div class="glass-card p-8 rounded-xl hover:shadow-2xl hover:-translate-y-1">
-<span class="font-label-mono text-label-mono text-primary mb-2 block">Dec 2022 — Result Awaited</span>
-<h3 class="font-headline-lg text-headline-lg mb-2">BS Computer Science</h3>
-<h4 class="font-headline-md text-headline-md text-on-surface-variant mb-2">School of Advanced Business &amp; Commerce (SABAC)</h4>
-<p class="font-body-md text-body-md text-on-surface-variant mb-4">
-                                Affiliated with University of the Punjab. Specialized study focusing on core computing concepts, programming paradigms, and software development methodologies.
-                            </p>
-<div class="flex flex-wrap gap-2 justify-end">
-<span class="bg-surface-variant text-on-surface-variant px-3 py-1 rounded-full font-label-mono text-caption uppercase">Result Awaited</span>
-</div>
-</div>
-<div class="hidden md:block absolute top-1/2 -right-[calc(theme(spacing.gutter)+4px)] w-4 h-4 bg-primary rounded-full border-4 border-background transform -translate-y-1/2 translate-x-1/2 z-10 transition-transform group-hover:scale-125"></div>
-</div>
-</div>
-<div class="hidden md:block md:col-span-2"></div>
-<div class="hidden md:block md:col-span-5"></div>
-
-<!-- 2. Amazon Virtual Assistance (Right) -->
-<div class="hidden md:block md:col-span-5"></div>
-<div class="hidden md:block md:col-span-2"></div>
-<div class="md:col-span-5 mb-12 md:mb-24 flex flex-col items-start text-left reveal">
-<div class="relative w-full group">
-<div class="glass-card p-8 rounded-xl hover:shadow-2xl hover:-translate-y-1">
-<span class="font-label-mono text-label-mono text-primary mb-2 block">Jul 2023 — Oct 2023</span>
-<h3 class="font-headline-lg text-headline-lg mb-2">Amazon Virtual Assistance</h3>
-<h4 class="font-headline-md text-headline-md text-on-surface-variant mb-4">DigiSkills (Virtual Course)</h4>
-<p class="font-body-md text-body-md text-on-surface-variant">
-                                Specialized e-commerce training program covering product hunting, store management, keyword optimization, and launch strategies.
-                            </p>
-</div>
-<div class="hidden md:block absolute top-1/2 -left-[calc(theme(spacing.gutter)+4px)] w-4 h-4 bg-primary rounded-full border-4 border-background transform -translate-y-1/2 -translate-x-1/2 z-10 transition-transform group-hover:scale-125"></div>
-</div>
-</div>
-
-<!-- 3. Certificate in IT (Left) -->
-<div class="md:col-span-5 mb-12 md:mb-24 flex flex-col items-end text-right reveal">
-<div class="relative w-full group">
-<div class="glass-card p-8 rounded-xl hover:shadow-2xl hover:-translate-y-1">
-<span class="font-label-mono text-label-mono text-primary mb-2 block">Feb 2022 — Aug 2022</span>
-<h3 class="font-headline-lg text-headline-lg mb-2">Certificate in IT</h3>
-<h4 class="font-headline-md text-headline-md text-on-surface-variant mb-4">Web &amp; App Development (NAVTTC)</h4>
-<p class="font-body-md text-body-md text-on-surface-variant">
-                                Professional certification program focused on design, implementation, and maintenance of modern web and mobile applications.
-                            </p>
-</div>
-<div class="hidden md:block absolute top-1/2 -right-[calc(theme(spacing.gutter)+4px)] w-4 h-4 bg-primary rounded-full border-4 border-background transform -translate-y-1/2 translate-x-1/2 z-10 transition-transform group-hover:scale-125"></div>
-</div>
-</div>
-<div class="hidden md:block md:col-span-2"></div>
-<div class="hidden md:block md:col-span-5"></div>
-
-<!-- 4. Intermediate (Right) -->
-<div class="hidden md:block md:col-span-5"></div>
-<div class="hidden md:block md:col-span-2"></div>
-<div class="md:col-span-5 mb-12 md:mb-24 flex flex-col items-start text-left reveal">
-<div class="relative w-full group">
-<div class="glass-card p-8 rounded-xl hover:shadow-2xl hover:-translate-y-1">
-<span class="font-label-mono text-label-mono text-primary mb-2 block">2019 — 2021</span>
-<h3 class="font-headline-lg text-headline-lg mb-2">Intermediate (Pre-Eng.)</h3>
-<h4 class="font-headline-md text-headline-md text-on-surface-variant mb-4">Jinnah Islamia College of Commerce</h4>
-<p class="font-body-md text-body-md text-on-surface-variant">
-                                Focused on analytical reasoning and core engineering fundamentals including mathematics, physics, and chemistry.
-                            </p>
-</div>
-<div class="hidden md:block absolute top-1/2 -left-[calc(theme(spacing.gutter)+4px)] w-4 h-4 bg-primary rounded-full border-4 border-background transform -translate-y-1/2 -translate-x-1/2 z-10 transition-transform group-hover:scale-125"></div>
-</div>
-</div>
-
-<!-- 5. Matriculation (Left) -->
-<div class="md:col-span-5 mb-12 md:mb-24 flex flex-col items-end text-right reveal">
-<div class="relative w-full group">
-<div class="glass-card p-8 rounded-xl hover:shadow-2xl hover:-translate-y-1">
-<span class="font-label-mono text-label-mono text-primary mb-2 block">2017 — 2019</span>
-<h3 class="font-headline-lg text-headline-lg mb-2">Matriculation (Bio Science)</h3>
-<h4 class="font-headline-md text-headline-md text-on-surface-variant mb-4">Government High School</h4>
-<p class="font-body-md text-body-md text-on-surface-variant">
-                                Foundation in science disciplines, focusing on biology, chemistry, physics, and mathematics.
-                            </p>
-</div>
-<div class="hidden md:block absolute top-1/2 -right-[calc(theme(spacing.gutter)+4px)] w-4 h-4 bg-primary rounded-full border-4 border-background transform -translate-y-1/2 translate-x-1/2 z-10 transition-transform group-hover:scale-125"></div>
-</div>
-</div>
-<div class="hidden md:block md:col-span-2"></div>
-<div class="hidden md:block md:col-span-5"></div>
-
-</div>
-</section>
-<!-- 4. Skills Section -->
-<section class="py-section-gap px-gutter max-w-container-max mx-auto" id="skills">
-<div class="mb-20 text-center md:text-left reveal">
-<h2 class="font-display text-display mb-6">Technical Arsenal</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
-                    A structured overview of my proficiency across modern software development ecosystems, application performance monitoring, and debugging.
-                </p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-<!-- Category: Development & Databases -->
-<div class="space-y-6 reveal">
-<div class="flex items-center gap-3 mb-8">
-<span class="material-symbols-outlined text-primary text-3xl">code</span>
-<h3 class="font-headline-lg text-headline-lg">Development &amp; Databases</h3>
-</div>
-<div class="glass-card p-6 rounded-xl space-y-6">
-<div class="skill-item">
-<div class="flex justify-between items-center mb-2">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary-container">phone_iphone</span>
-<span class="font-label-mono text-label-mono uppercase">Flutter &amp; Dart</span>
-</div>
-<span class="font-label-mono text-label-mono text-primary">95%</span>
-</div>
-<div class="progress-bar-bg"><div class="progress-bar-fill" data-width="95%"></div></div>
-</div>
-<div class="skill-item">
-<div class="flex justify-between items-center mb-2">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary-container">javascript</span>
-<span class="font-label-mono text-label-mono uppercase">JavaScript, HTML &amp; CSS</span>
-</div>
-<span class="font-label-mono text-label-mono text-primary">90%</span>
-</div>
-<div class="progress-bar-bg"><div class="progress-bar-fill" data-width="90%"></div></div>
-</div>
-<div class="skill-item">
-<div class="flex justify-between items-center mb-2">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary-container">storage</span>
-<span class="font-label-mono text-label-mono uppercase">Firebase, MySQL &amp; MongoDB</span>
-</div>
-<span class="font-label-mono text-label-mono text-primary">85%</span>
-</div>
-<div class="progress-bar-bg"><div class="progress-bar-fill" data-width="85%"></div></div>
-</div>
-<div class="skill-item">
-<div class="flex justify-between items-center mb-2">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary-container">dns</span>
-<span class="font-label-mono text-label-mono uppercase">Node.js</span>
-</div>
-<span class="font-label-mono text-label-mono text-primary">80%</span>
-</div>
-<div class="progress-bar-bg"><div class="progress-bar-fill" data-width="80%"></div></div>
-</div>
-</div>
-</div>
-<!-- Category: App Support & Monitoring -->
-<div class="space-y-6 reveal" style="transition-delay: 150ms">
-<div class="flex items-center gap-3 mb-8">
-<span class="material-symbols-outlined text-primary text-3xl">analytics</span>
-<h3 class="font-headline-lg text-headline-lg">Operations &amp; Monitoring</h3>
-</div>
-<div class="glass-card p-6 rounded-xl space-y-6">
-<div class="skill-item">
-<div class="flex justify-between items-center mb-2">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary-container">monitoring</span>
-<span class="font-label-mono text-label-mono uppercase">Performance Monitoring &amp; Issue Triage</span>
-</div>
-<span class="font-label-mono text-label-mono text-primary">95%</span>
-</div>
-<div class="progress-bar-bg"><div class="progress-bar-fill" data-width="95%"></div></div>
-</div>
-<div class="skill-item">
-<div class="flex justify-between items-center mb-2">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary-container">bug_report</span>
-<span class="font-label-mono text-label-mono uppercase">Connectivity &amp; Device Debugging</span>
-</div>
-<span class="font-label-mono text-label-mono text-primary">92%</span>
-</div>
-<div class="progress-bar-bg"><div class="progress-bar-fill" data-width="92%"></div></div>
-</div>
-<div class="skill-item">
-<div class="flex justify-between items-center mb-2">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary-container">api</span>
-<span class="font-label-mono text-label-mono uppercase">API Testing (Postman)</span>
-</div>
-<span class="font-label-mono text-label-mono text-primary">90%</span>
-</div>
-<div class="progress-bar-bg"><div class="progress-bar-fill" data-width="90%"></div></div>
-</div>
-<div class="skill-item">
-<div class="flex justify-between items-center mb-2">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary-container">settings_suggest</span>
-<span class="font-label-mono text-label-mono uppercase">Git &amp; Order Management Systems</span>
-</div>
-<span class="font-label-mono text-label-mono text-primary">85%</span>
-</div>
-<div class="progress-bar-bg"><div class="progress-bar-fill" data-width="85%"></div></div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- 5. Projects Section -->
-<section class="py-section-gap px-gutter max-w-container-max mx-auto" id="projects">
-<div class="mb-16 reveal">
-<span class="section-tag">Portfolio</span>
-<h2 class="font-display text-display mb-4">Projects</h2>
-<p class="text-on-surface-variant max-w-2xl font-body-lg text-body-lg">
-          A showcase of my applications, automation tools, and professional web platforms.
-        </p>
-</div>
-<div id="projects-grid" class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-
-    <!-- Project 1: Travel Wise -->
-    <article class="project-card reveal flex flex-col h-full" data-category="mobile">
-      <div class="aspect-[16/9] overflow-hidden bg-surface-container relative">
-        <img src="travel_wise.png" alt="Travel Wise mobile app screenshot" class="w-full h-full object-cover block" />
-        <div class="absolute inset-0 bg-gradient-to-t from-surface/70 to-transparent"></div>
-      </div>
-      <div class="p-10 flex flex-col flex-1">
-        <div class="flex flex-wrap gap-2 mb-4">
-          <span class="skill-pill">Flutter</span>
-          <span class="skill-pill">Dart</span>
-          <span class="skill-pill">Firebase</span>
-        </div>
-        <h3 class="font-headline-md text-headline-md mb-1 text-on-background">Travel Wise</h3>
-        <p class="font-label-mono text-caption text-primary mb-3">Final Year Project</p>
-        <p class="text-on-surface-variant leading-relaxed mb-4">A cross-platform mobile application using Flutter and Firebase for tourism planning, covering authentication, real-time data, and location-based features.</p>
-        <ul class="text-on-surface-variant text-body-md space-y-2 mb-6 pl-5 list-disc">
-          <li>Handled end-to-end debugging of app issues, distinguishing backend/database failures from device/network issues.</li>
-          <li>Designed real-time collaboration features and location-based trip planning.</li>
-        </ul>
-        <div class="mt-auto grid gap-3 sm:grid-cols-1">
-          <a href="https://github.com/zeeshan8540/travel_wise_updated" target="_blank" rel="noopener noreferrer" class="btn-primary justify-center py-3 text-sm" aria-label="View Travel Wise on GitHub">
-            <span class="material-symbols-outlined" aria-hidden="true">code</span> GitHub Repository
-          </a>
-        </div>
-      </div>
-    </article>
-
-    <!-- Project 2: Amazon Repricer -->
-    <article class="project-card reveal flex flex-col h-full" data-category="automation">
-      <div class="aspect-[16/9] overflow-hidden bg-surface-container relative">
-        <img src="amazon_repricer.png" alt="Amazon Repricer dashboard screenshot" class="w-full h-full object-cover block" />
-        <div class="absolute inset-0 bg-gradient-to-t from-surface/70 to-transparent"></div>
-      </div>
-      <div class="p-10 flex flex-col flex-1">
-        <div class="flex flex-wrap gap-2 mb-4">
-          <span class="skill-pill">JavaScript</span>
-          <span class="skill-pill">Node.js</span>
-          <span class="skill-pill">APIs</span>
-        </div>
-        <h3 class="font-headline-md text-headline-md mb-1 text-on-background">Amazon Repricer</h3>
-        <p class="font-label-mono text-caption text-primary mb-3">Personal Project</p>
-        <p class="text-on-surface-variant leading-relaxed mb-4">A JavaScript-based tool designed to automatically monitor and adjust product listings, involving continuous performance checks and robust error handling.</p>
-        <ul class="text-on-surface-variant text-body-md space-y-2 mb-6 pl-5 list-disc">
-          <li>Automated real-time pricing adjustments based on market shifts and rule configurations.</li>
-          <li>Integrated with Amazon live APIs with secure authentication and rate-limit safety checks.</li>
-        </ul>
-        <div class="mt-auto grid gap-3 sm:grid-cols-1">
-          <a href="https://github.com/zeeshan8540/amazon_repricer" target="_blank" rel="noopener noreferrer" class="btn-primary justify-center py-3 text-sm" aria-label="View Amazon Repricer on GitHub">
-            <span class="material-symbols-outlined" aria-hidden="true">code</span> GitHub Repository
-          </a>
-        </div>
-      </div>
-    </article>
-
-    <!-- Project 3: Personal Portfolio Website -->
-    <article class="project-card reveal flex flex-col h-full" data-category="frontend">
-      <div class="aspect-[16/9] overflow-hidden bg-surface-container relative">
-        <img src="portfolio_mockup.png" alt="Portfolio Website screenshot" class="w-full h-full object-cover block" />
-        <div class="absolute inset-0 bg-gradient-to-t from-surface/70 to-transparent"></div>
-      </div>
-      <div class="p-10 flex flex-col flex-1">
-        <div class="flex flex-wrap gap-2 mb-4">
-          <span class="skill-pill">HTML</span>
-          <span class="skill-pill">CSS</span>
-          <span class="skill-pill">JavaScript</span>
-        </div>
-        <h3 class="font-headline-md text-headline-md mb-1 text-on-background">Personal Portfolio</h3>
-        <p class="font-label-mono text-caption text-primary mb-3">Personal Project</p>
-        <p class="text-on-surface-variant leading-relaxed mb-4">Designed and deployed a responsive personal portfolio website showcasing projects, skills, education, and professional experience.</p>
-        <ul class="text-on-surface-variant text-body-md space-y-2 mb-6 pl-5 list-disc">
-          <li>Fully responsive layouts built with modern CSS and Tailwind grid framework.</li>
-          <li>Hosted and maintained on Netlify with automated continuous deployment.</li>
-        </ul>
-        <div class="mt-auto grid gap-3 sm:grid-cols-2">
-          <a href="https://zeeshanarshad.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn-primary justify-center py-3 text-sm" aria-label="Visit Portfolio live website">
-            <span class="material-symbols-outlined" aria-hidden="true">rocket_launch</span> Live Site
-          </a>
-          <a href="https://github.com/zeeshan8540/my_portfolio" target="_blank" rel="noopener noreferrer" class="btn-ghost justify-center py-3 text-sm" aria-label="View Portfolio on GitHub">
-            <span class="material-symbols-outlined" aria-hidden="true">code</span> GitHub
-          </a>
-        </div>
-      </div>
-    </article>
-
-  </div>
-</section>
-<!-- 6. Professional Exposure Section -->
-<section class="py-section-gap px-gutter max-w-container-max mx-auto" id="exposure">
-<div class="mb-16 reveal">
-<span class="section-tag">Experience</span>
-<h2 class="font-display text-display mb-4">Professional <span class="text-primary">Exposure</span></h2>
-<p class="text-on-surface-variant max-w-2xl font-body-lg text-body-lg">Insights and experiences from my recent professional visits and industry interactions.</p>
-</div>
-<div class="grid grid-cols-1 gap-8 md:grid-cols-1">
-  <!-- Folio3 Visit -->
-  <article class="rounded-2xl border border-outline-variant bg-surface-container-high p-8 md:p-12 reveal">
-    <div class="flex flex-col md:flex-row gap-8 items-start">
-      <div class="flex-1">
-        <div class="flex items-center gap-3 mb-6">
-          <span class="material-symbols-outlined text-4xl text-primary">location_on</span>
-          <div>
-            <p class="font-label-mono text-label-mono uppercase tracking-[0.2em] text-primary">Recent Visit</p>
-            <h3 class="font-headline-md text-headline-md text-on-background">Folio3</h3>
+            <a class="border border-outline-variant text-on-background font-bold px-8 py-4 rounded-xl hover:bg-surface-variant transition-colors duration-300"
+              href="#resume">
+              Download CV
+            </a>
           </div>
         </div>
-        <p class="text-on-surface-variant leading-relaxed mb-6 font-body-lg text-body-lg">Recently visited Folio3's offices to collaborate with their talented team and explore cutting-edge development practices. Gained valuable insights into their innovative approach to software engineering and product development.</p>
-        <div class="flex flex-wrap gap-3">
-          <span class="skill-pill">Professional Networking</span>
-          <span class="skill-pill">Team Collaboration</span>
-          <span class="skill-pill">Best Practices</span>
+        <div class="relative w-full lg:w-1/2 flex justify-center lg:justify-end reveal active">
+          <div class="relative w-72 h-72 md:w-96 md:h-96 floating-hero">
+            <div class="absolute -inset-4 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
+            <div
+              class="relative z-10 w-full h-full rounded-3xl overflow-hidden border-2 border-outline-variant bg-surface-container shadow-2xl">
+              <img alt="Zeeshan Arshad"
+                class="w-full h-full object-cover object-top theme-img-dark theme-avatar-dynamic"
+                src="assets/images/Zeeshan-dark.jpg" />
+              <img alt="Zeeshan Arshad"
+                class="w-full h-full object-cover object-top theme-img-light theme-avatar-dynamic"
+                src="assets/images/Zeeshan-light.jpg" />
+            </div>
+            <div
+              class="absolute -bottom-6 -left-6 z-20 glass-card p-4 rounded-2xl shadow-xl hidden md:block border border-outline-variant/40">
+              <div class="flex items-center gap-3">
+                <div class="bg-primary/20 p-2.5 rounded-xl text-primary flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-2xl">code</span>
+                </div>
+                <div>
+                  <p class="font-label-mono text-caption text-on-surface-variant uppercase tracking-wider">Top Skills
+                  </p>
+                  <p class="font-headline-md text-headline-md font-bold text-on-background">Full Stack</p>
+                  <div class="flex items-center gap-1.5 mt-1 flex-wrap">
+                    <span
+                      class="text-[11px] font-label-mono font-semibold text-primary bg-primary/10 px-2 py-0.5 rounded border border-primary/20">Flutter</span>
+                    <span
+                      class="text-[11px] font-label-mono font-semibold text-primary bg-primary/10 px-2 py-0.5 rounded border border-primary/20">Next.js</span>
+                    <span
+                      class="text-[11px] font-label-mono font-semibold text-primary bg-primary/10 px-2 py-0.5 rounded border border-primary/20">Python</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-24 bg-surface-container-low py-16 border-y border-outline-variant rounded-3xl reveal">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div class="text-center">
+            <p class="font-display text-headline-lg text-primary">3+</p>
+            <p class="font-label-mono text-label-mono text-on-surface-variant uppercase">Years in Tech</p>
+          </div>
+          <div class="text-center">
+            <p class="font-display text-headline-lg text-primary">4</p>
+            <p class="font-label-mono text-label-mono text-on-surface-variant uppercase">Key Projects</p>
+          </div>
+          <div class="text-center">
+            <p class="font-display text-headline-lg text-primary">100%</p>
+            <p class="font-label-mono text-label-mono text-on-surface-variant uppercase">Commit Rate</p>
+          </div>
+          <div class="text-center">
+            <p class="font-display text-headline-lg text-primary">BSCS</p>
+            <p class="font-label-mono text-label-mono text-on-surface-variant uppercase">Degree Awaited</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 3. Education Section -->
+    <section class="py-section-gap px-gutter max-w-container-max mx-auto" id="education">
+      <header class="mb-section-gap reveal">
+        <h2 class="font-display text-display mb-4">Academic <span class="text-primary">Path</span></h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+          A journey defined by continuous learning, technical discipline, and a passion for engineering high-performance
+          software solutions.
+        </p>
+      </header>
+      <div class="relative grid grid-cols-1 md:grid-cols-12 gap-gutter">
+        <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-[1px] timeline-line transform -translate-x-1/2">
+        </div>
+
+        <!-- 1. BS Computer Science (Left) -->
+        <div class="md:col-span-5 mb-12 md:mb-24 flex flex-col items-end text-right reveal">
+          <div class="relative w-full group">
+            <div class="glass-card p-8 rounded-xl hover:shadow-2xl hover:-translate-y-1">
+              <span class="font-label-mono text-label-mono text-primary mb-2 block">Dec 2022 — Result Awaited</span>
+              <h3 class="font-headline-lg text-headline-lg mb-2">BS Computer Science</h3>
+              <h4 class="font-headline-md text-headline-md text-on-surface-variant mb-2">School of Advanced Business
+                &amp; Commerce (SABAC)</h4>
+              <p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                Affiliated with University of the Punjab. Specialized study focusing on core computing concepts,
+                programming paradigms, and software development methodologies.
+              </p>
+              <div class="flex flex-wrap gap-2 justify-end">
+                <span
+                  class="bg-surface-variant text-on-surface-variant px-3 py-1 rounded-full font-label-mono text-caption uppercase">Result
+                  Awaited</span>
+              </div>
+            </div>
+            <div
+              class="hidden md:block absolute top-1/2 -right-[calc(theme(spacing.gutter)+4px)] w-4 h-4 bg-primary rounded-full border-4 border-background transform -translate-y-1/2 translate-x-1/2 z-10 transition-transform group-hover:scale-125">
+            </div>
+          </div>
+        </div>
+        <div class="hidden md:block md:col-span-2"></div>
+        <div class="hidden md:block md:col-span-5"></div>
+
+        <!-- 2. Amazon Virtual Assistance (Right) -->
+        <div class="hidden md:block md:col-span-5"></div>
+        <div class="hidden md:block md:col-span-2"></div>
+        <div class="md:col-span-5 mb-12 md:mb-24 flex flex-col items-start text-left reveal">
+          <div class="relative w-full group">
+            <div class="glass-card p-8 rounded-xl hover:shadow-2xl hover:-translate-y-1">
+              <span class="font-label-mono text-label-mono text-primary mb-2 block">Jul 2023 — Oct 2023</span>
+              <h3 class="font-headline-lg text-headline-lg mb-2">Amazon Virtual Assistance</h3>
+              <h4 class="font-headline-md text-headline-md text-on-surface-variant mb-4">DigiSkills (Virtual Course)
+              </h4>
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                Specialized e-commerce training program covering product hunting, store management, keyword
+                optimization, and launch strategies.
+              </p>
+            </div>
+            <div
+              class="hidden md:block absolute top-1/2 -left-[calc(theme(spacing.gutter)+4px)] w-4 h-4 bg-primary rounded-full border-4 border-background transform -translate-y-1/2 -translate-x-1/2 z-10 transition-transform group-hover:scale-125">
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Certificate in IT (Left) -->
+        <div class="md:col-span-5 mb-12 md:mb-24 flex flex-col items-end text-right reveal">
+          <div class="relative w-full group">
+            <div class="glass-card p-8 rounded-xl hover:shadow-2xl hover:-translate-y-1">
+              <span class="font-label-mono text-label-mono text-primary mb-2 block">Feb 2022 — Aug 2022</span>
+              <h3 class="font-headline-lg text-headline-lg mb-2">Certificate in IT</h3>
+              <h4 class="font-headline-md text-headline-md text-on-surface-variant mb-4">Web &amp; App Development
+                (NAVTTC)</h4>
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                Professional certification program focused on design, implementation, and maintenance of modern web and
+                mobile applications.
+              </p>
+            </div>
+            <div
+              class="hidden md:block absolute top-1/2 -right-[calc(theme(spacing.gutter)+4px)] w-4 h-4 bg-primary rounded-full border-4 border-background transform -translate-y-1/2 translate-x-1/2 z-10 transition-transform group-hover:scale-125">
+            </div>
+          </div>
+        </div>
+        <div class="hidden md:block md:col-span-2"></div>
+        <div class="hidden md:block md:col-span-5"></div>
+
+        <!-- 4. Intermediate (Right) -->
+        <div class="hidden md:block md:col-span-5"></div>
+        <div class="hidden md:block md:col-span-2"></div>
+        <div class="md:col-span-5 mb-12 md:mb-24 flex flex-col items-start text-left reveal">
+          <div class="relative w-full group">
+            <div class="glass-card p-8 rounded-xl hover:shadow-2xl hover:-translate-y-1">
+              <span class="font-label-mono text-label-mono text-primary mb-2 block">2019 — 2021</span>
+              <h3 class="font-headline-lg text-headline-lg mb-2">Intermediate (Pre-Eng.)</h3>
+              <h4 class="font-headline-md text-headline-md text-on-surface-variant mb-4">Jinnah Islamia College of
+                Commerce</h4>
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                Focused on analytical reasoning and core engineering fundamentals including mathematics, physics, and
+                chemistry.
+              </p>
+            </div>
+            <div
+              class="hidden md:block absolute top-1/2 -left-[calc(theme(spacing.gutter)+4px)] w-4 h-4 bg-primary rounded-full border-4 border-background transform -translate-y-1/2 -translate-x-1/2 z-10 transition-transform group-hover:scale-125">
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Matriculation (Left) -->
+        <div class="md:col-span-5 mb-12 md:mb-24 flex flex-col items-end text-right reveal">
+          <div class="relative w-full group">
+            <div class="glass-card p-8 rounded-xl hover:shadow-2xl hover:-translate-y-1">
+              <span class="font-label-mono text-label-mono text-primary mb-2 block">2017 — 2019</span>
+              <h3 class="font-headline-lg text-headline-lg mb-2">Matriculation (Bio Science)</h3>
+              <h4 class="font-headline-md text-headline-md text-on-surface-variant mb-4">Government High School</h4>
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                Foundation in science disciplines, focusing on biology, chemistry, physics, and mathematics.
+              </p>
+            </div>
+            <div
+              class="hidden md:block absolute top-1/2 -right-[calc(theme(spacing.gutter)+4px)] w-4 h-4 bg-primary rounded-full border-4 border-background transform -translate-y-1/2 translate-x-1/2 z-10 transition-transform group-hover:scale-125">
+            </div>
+          </div>
+        </div>
+        <div class="hidden md:block md:col-span-2"></div>
+        <div class="hidden md:block md:col-span-5"></div>
+
+      </div>
+    </section>
+    <!-- 4. Skills Section -->
+    <section class="py-section-gap px-gutter max-w-container-max mx-auto" id="skills">
+      <div class="mb-20 text-center md:text-left reveal">
+        <h2 class="font-display text-display mb-6">Technical Arsenal</h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+          A structured overview of my proficiency across modern software development ecosystems, application performance
+          monitoring, and debugging.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <!-- Category: Development & Databases -->
+        <div class="space-y-6 reveal">
+          <div class="flex items-center gap-3 mb-8">
+            <span class="material-symbols-outlined text-primary text-3xl">code</span>
+            <h3 class="font-headline-lg text-headline-lg">Development &amp; Databases</h3>
+          </div>
+          <div class="glass-card p-6 rounded-xl space-y-6">
+            <div class="skill-item">
+              <div class="flex justify-between items-center mb-2">
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-primary-container">phone_iphone</span>
+                  <span class="font-label-mono text-label-mono uppercase">Flutter &amp; Dart</span>
+                </div>
+                <span class="font-label-mono text-label-mono text-primary">95%</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" data-width="95%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="flex justify-between items-center mb-2">
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-primary-container">javascript</span>
+                  <span class="font-label-mono text-label-mono uppercase">JavaScript, HTML &amp; CSS</span>
+                </div>
+                <span class="font-label-mono text-label-mono text-primary">90%</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" data-width="90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="flex justify-between items-center mb-2">
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-primary-container">storage</span>
+                  <span class="font-label-mono text-label-mono uppercase">Firebase, MySQL &amp; MongoDB</span>
+                </div>
+                <span class="font-label-mono text-label-mono text-primary">85%</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" data-width="85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="flex justify-between items-center mb-2">
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-primary-container">dns</span>
+                  <span class="font-label-mono text-label-mono uppercase">Node.js</span>
+                </div>
+                <span class="font-label-mono text-label-mono text-primary">80%</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" data-width="80%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Category: App Support & Monitoring -->
+        <div class="space-y-6 reveal" style="transition-delay: 150ms">
+          <div class="flex items-center gap-3 mb-8">
+            <span class="material-symbols-outlined text-primary text-3xl">analytics</span>
+            <h3 class="font-headline-lg text-headline-lg">Operations &amp; Monitoring</h3>
+          </div>
+          <div class="glass-card p-6 rounded-xl space-y-6">
+            <div class="skill-item">
+              <div class="flex justify-between items-center mb-2">
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-primary-container">monitoring</span>
+                  <span class="font-label-mono text-label-mono uppercase">Performance Monitoring &amp; Issue
+                    Triage</span>
+                </div>
+                <span class="font-label-mono text-label-mono text-primary">95%</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" data-width="95%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="flex justify-between items-center mb-2">
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-primary-container">bug_report</span>
+                  <span class="font-label-mono text-label-mono uppercase">Connectivity &amp; Device Debugging</span>
+                </div>
+                <span class="font-label-mono text-label-mono text-primary">92%</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" data-width="92%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="flex justify-between items-center mb-2">
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-primary-container">api</span>
+                  <span class="font-label-mono text-label-mono uppercase">API Testing (Postman)</span>
+                </div>
+                <span class="font-label-mono text-label-mono text-primary">90%</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" data-width="90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="flex justify-between items-center mb-2">
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-primary-container">settings_suggest</span>
+                  <span class="font-label-mono text-label-mono uppercase">Git &amp; Order Management Systems</span>
+                </div>
+                <span class="font-label-mono text-label-mono text-primary">85%</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" data-width="85%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 5. Projects Section -->
+    <section class="py-section-gap px-gutter max-w-container-max mx-auto" id="projects">
+      <div class="mb-16 reveal">
+        <span class="section-tag">Portfolio</span>
+        <h2 class="font-display text-display mb-4">Projects</h2>
+        <p class="text-on-surface-variant max-w-2xl font-body-lg text-body-lg">
+          A showcase of my applications, automation tools, and professional web platforms.
+        </p>
+      </div>
+      <div id="projects-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
+
+        <!-- Project 1: OrbitINQ AI -->
+        <article class="project-card reveal flex flex-col h-full cursor-pointer group"
+          onclick="openProjectModal('orbitinq')" tabindex="0" role="button" aria-label="View OrbitINQ AI details"
+          onkeydown="if(event.key==='Enter'||event.key===' ')openProjectModal('orbitinq')">
+          <div class="aspect-[16/9] overflow-hidden bg-surface-container relative">
+            <img src="assets/images/OrbitINQ.png" alt="OrbitINQ AI Platform Dashboard"
+              class="w-full h-full object-cover block group-hover:scale-105 transition-transform duration-500" />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent opacity-80">
+            </div>
+            <div
+              class="absolute top-3 right-3 bg-primary/20 backdrop-blur-md border border-primary/40 px-2.5 py-0.5 rounded-full text-[11px] font-label-mono text-primary font-semibold flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+              In Development
+            </div>
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <div class="flex flex-wrap gap-1 mb-2.5">
+              <span class="skill-pill">Node.js</span>
+              <span class="skill-pill">Next.js</span>
+              <span class="skill-pill">Postgres</span>
+            </div>
+            <h3 class="font-headline-md text-lg text-on-background group-hover:text-primary transition-colors mb-0.5">
+              OrbitINQ AI</h3>
+            <p class="font-label-mono text-caption text-primary mb-2">Inquiry &amp; Order AI</p>
+            <p class="text-on-surface-variant text-xs leading-relaxed mb-4 line-clamp-2">
+              Autonomous AI platform unifying WhatsApp, Gmail, and web inquiries into an automated pipeline.
+            </p>
+            <div
+              class="mt-auto pt-3 border-t border-outline-variant/30 flex items-center justify-between text-primary font-semibold text-xs group-hover:translate-x-0.5 transition-transform">
+              <span class="inline-flex items-center gap-1">View Details <span
+                  class="material-symbols-outlined text-sm">arrow_forward</span></span>
+              <span class="material-symbols-outlined text-on-surface-variant text-sm opacity-60">visibility</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: Amazon Repricer -->
+        <article class="project-card reveal flex flex-col h-full cursor-pointer group"
+          onclick="openProjectModal('amazon-repricer')" tabindex="0" role="button"
+          aria-label="View Amazon Repricer details"
+          onkeydown="if(event.key==='Enter'||event.key===' ')openProjectModal('amazon-repricer')">
+          <div class="aspect-[16/9] overflow-hidden bg-surface-container relative">
+            <img src="assets/images/Amazon%20Repricer.png" alt="Amazon Repricer Command Center"
+              class="w-full h-full object-cover block group-hover:scale-105 transition-transform duration-500" />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent opacity-80">
+            </div>
+            <div
+              class="absolute top-3 right-3 bg-surface-container-high/90 backdrop-blur-md border border-outline-variant px-2.5 py-0.5 rounded-full text-[11px] font-label-mono text-primary font-semibold">
+              Desktop &amp; Web
+            </div>
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <div class="flex flex-wrap gap-1 mb-2.5">
+              <span class="skill-pill">Python</span>
+              <span class="skill-pill">Selenium</span>
+              <span class="skill-pill">Electron</span>
+            </div>
+            <h3 class="font-headline-md text-lg text-on-background group-hover:text-primary transition-colors mb-0.5">
+              Amazon Repricer</h3>
+            <p class="font-label-mono text-caption text-primary mb-2">Pricing Automation</p>
+            <p class="text-on-surface-variant text-xs leading-relaxed mb-4 line-clamp-2">
+              Pricing bot &amp; Electron desktop app evaluating quantity breaks to automate repricing.
+            </p>
+            <div
+              class="mt-auto pt-3 border-t border-outline-variant/30 flex items-center justify-between text-primary font-semibold text-xs group-hover:translate-x-0.5 transition-transform">
+              <span class="inline-flex items-center gap-1">View Details <span
+                  class="material-symbols-outlined text-sm">arrow_forward</span></span>
+              <span class="material-symbols-outlined text-on-surface-variant text-sm opacity-60">visibility</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: Travel Wise -->
+        <article class="project-card reveal flex flex-col h-full cursor-pointer group"
+          onclick="openProjectModal('travel-wise')" tabindex="0" role="button" aria-label="View Travel Wise details"
+          onkeydown="if(event.key==='Enter'||event.key===' ')openProjectModal('travel-wise')">
+          <div class="aspect-[16/9] overflow-hidden bg-surface-container relative">
+            <img src="assets/images/Travel%20Wise.jpg" alt="Travel Wise Tourism Planning App"
+              class="w-full h-full object-cover object-[center_28%] block group-hover:scale-105 transition-transform duration-500" />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent opacity-80">
+            </div>
+            <div
+              class="absolute top-3 right-3 bg-surface-container-high/90 backdrop-blur-md border border-outline-variant px-2.5 py-0.5 rounded-full text-[11px] font-label-mono text-primary font-semibold">
+              Final Year Project
+            </div>
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <div class="flex flex-wrap gap-1 mb-2.5">
+              <span class="skill-pill">Flutter</span>
+              <span class="skill-pill">Dart</span>
+              <span class="skill-pill">Firebase</span>
+            </div>
+            <h3 class="font-headline-md text-lg text-on-background group-hover:text-primary transition-colors mb-0.5">
+              Travel Wise</h3>
+            <p class="font-label-mono text-caption text-primary mb-2">Mobile Tourism App</p>
+            <p class="text-on-surface-variant text-xs leading-relaxed mb-4 line-clamp-2">
+              Cross-platform mobile application for collaborative tourism planning and trip discovery.
+            </p>
+            <div
+              class="mt-auto pt-3 border-t border-outline-variant/30 flex items-center justify-between text-primary font-semibold text-xs group-hover:translate-x-0.5 transition-transform">
+              <span class="inline-flex items-center gap-1">View Details <span
+                  class="material-symbols-outlined text-sm">arrow_forward</span></span>
+              <span class="material-symbols-outlined text-on-surface-variant text-sm opacity-60">visibility</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4: Personal Portfolio Website -->
+        <article class="project-card reveal flex flex-col h-full cursor-pointer group"
+          onclick="openProjectModal('portfolio')" tabindex="0" role="button"
+          aria-label="View Personal Portfolio details"
+          onkeydown="if(event.key==='Enter'||event.key===' ')openProjectModal('portfolio')">
+          <div class="aspect-[16/9] overflow-hidden bg-surface-container relative">
+            <img src="assets/images/Portfolio.png" alt="Personal Portfolio Website"
+              class="w-full h-full object-cover object-top block group-hover:scale-105 transition-transform duration-500" />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent opacity-80">
+            </div>
+            <div
+              class="absolute top-3 right-3 bg-surface-container-high/90 backdrop-blur-md border border-outline-variant px-2.5 py-0.5 rounded-full text-[11px] font-label-mono text-primary font-semibold">
+              Live Site
+            </div>
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <div class="flex flex-wrap gap-1 mb-2.5">
+              <span class="skill-pill">HTML5</span>
+              <span class="skill-pill">CSS3</span>
+              <span class="skill-pill">JS</span>
+            </div>
+            <h3 class="font-headline-md text-lg text-on-background group-hover:text-primary transition-colors mb-0.5">
+              Personal Portfolio</h3>
+            <p class="font-label-mono text-caption text-primary mb-2">Modern Portfolio</p>
+            <p class="text-on-surface-variant text-xs leading-relaxed mb-4 line-clamp-2">
+              Developer portfolio featuring dynamic dark/light mode switching and canvas starfield.
+            </p>
+            <div
+              class="mt-auto pt-3 border-t border-outline-variant/30 flex items-center justify-between text-primary font-semibold text-xs group-hover:translate-x-0.5 transition-transform">
+              <span class="inline-flex items-center gap-1">View Details <span
+                  class="material-symbols-outlined text-sm">arrow_forward</span></span>
+              <span class="material-symbols-outlined text-on-surface-variant text-sm opacity-60">visibility</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+    <!-- 6. Professional Exposure Section -->
+    <section class="py-section-gap px-gutter max-w-container-max mx-auto" id="exposure">
+      <div class="mb-16 reveal">
+        <span class="section-tag">Experience</span>
+        <h2 class="font-display text-display mb-4">Professional <span class="text-primary">Exposure</span></h2>
+        <p class="text-on-surface-variant max-w-2xl font-body-lg text-body-lg">Insights and experiences from my recent
+          professional visits and industry interactions.</p>
+      </div>
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-1">
+        <!-- Folio3 Visit -->
+        <article class="rounded-2xl border border-outline-variant bg-surface-container-high p-8 md:p-12 reveal">
+          <div class="flex flex-col md:flex-row gap-8 items-start">
+            <div class="flex-1">
+              <div class="flex items-center gap-3 mb-6">
+                <span class="material-symbols-outlined text-4xl text-primary">location_on</span>
+                <div>
+                  <p class="font-label-mono text-label-mono uppercase tracking-[0.2em] text-primary">Recent Visit</p>
+                  <h3 class="font-headline-md text-headline-md text-on-background">Folio3</h3>
+                </div>
+              </div>
+              <p class="text-on-surface-variant leading-relaxed mb-6 font-body-lg text-body-lg">Recently visited
+                Folio3's offices to collaborate with their talented team and explore cutting-edge development practices.
+                Gained valuable insights into their innovative approach to software engineering and product development.
+              </p>
+              <div class="flex flex-wrap gap-3">
+                <span class="skill-pill">Professional Networking</span>
+                <span class="skill-pill">Team Collaboration</span>
+                <span class="skill-pill">Best Practices</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- 7. Resume Section -->
+    <section class="py-section-gap px-gutter max-w-container-max mx-auto" id="resume">
+      <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6 reveal">
+        <div class="max-w-2xl">
+          <h2 class="font-display text-display text-on-background mb-4">Curriculum Vitae</h2>
+          <p class="font-body-lg text-body-lg text-on-surface-variant">A comprehensive overview of my professional
+            journey, technical expertise, and academic background.</p>
+        </div>
+        <a class="group flex items-center gap-3 bg-surface-container-high border border-outline-variant hover:border-primary text-on-surface px-8 py-4 rounded-xl transition-all duration-300 shadow-lg"
+          href="assets/docs/resume.pdf" target="_blank" rel="noopener noreferrer">
+          <span class="material-symbols-outlined">download</span>
+          <span class="font-bold">Download CV (PDF)</span>
+        </a>
+      </div>
+      <div class="resume-sheet rounded-2xl overflow-hidden p-8 md:p-14 max-w-4xl mx-auto reveal">
+        <!-- Resume Header -->
+        <header class="border-b border-outline-variant pb-10 mb-10">
+          <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+            <div class="flex-1">
+              <h3 class="font-headline-lg text-headline-lg text-on-background mb-1">Zeeshan Arshad</h3>
+              <p class="font-label-mono text-label-mono text-primary uppercase tracking-widest mb-4 font-semibold">
+                Full Stack &amp; Mobile App Developer | E-Commerce Account Manager
+              </p>
+              <div class="flex flex-wrap gap-y-2.5 gap-x-5 text-on-surface-variant text-sm">
+                <a href="mailto:zeeshanarshad854@gmail.com"
+                  class="flex items-center gap-1.5 hover:text-primary transition-colors">
+                  <span class="material-symbols-outlined text-[18px]">mail</span>
+                  <span>zeeshanarshad854@gmail.com</span>
+                </a>
+                <a href="tel:+923242012454" class="flex items-center gap-1.5 hover:text-primary transition-colors">
+                  <span class="material-symbols-outlined text-[18px]">call</span>
+                  <span>+92 324 2012454</span>
+                </a>
+                <span class="flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-[18px]">location_on</span>
+                  <span>Lahore, Pakistan</span>
+                </span>
+                <a href="https://zeeshanarshad.netlify.app" target="_blank" rel="noopener noreferrer"
+                  class="flex items-center gap-1.5 hover:text-primary transition-colors">
+                  <span class="material-symbols-outlined text-[18px]">language</span>
+                  <span>zeeshanarshad.netlify.app</span>
+                </a>
+                <a href="https://linkedin.com/in/zeeshan-arshad" target="_blank" rel="noopener noreferrer"
+                  class="flex items-center gap-1.5 hover:text-primary transition-colors">
+                  <span class="material-symbols-outlined text-[18px]">share</span>
+                  <span>linkedin.com/in/zeeshan-arshad</span>
+                </a>
+                <a href="https://github.com/zeeshan8540" target="_blank" rel="noopener noreferrer"
+                  class="flex items-center gap-1.5 hover:text-primary transition-colors">
+                  <span class="material-symbols-outlined text-[18px]">code</span>
+                  <span>github.com/zeeshan8540</span>
+                </a>
+              </div>
+            </div>
+            <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-outline-variant shrink-0 shadow-lg">
+              <img alt="Zeeshan Arshad"
+                class="w-full h-full object-cover object-top theme-img-dark theme-avatar-dynamic"
+                src="assets/images/Zeeshan-dark.jpg" />
+              <img alt="Zeeshan Arshad"
+                class="w-full h-full object-cover object-top theme-img-light theme-avatar-dynamic"
+                src="assets/images/Zeeshan-light.jpg" />
+            </div>
+          </div>
+        </header>
+
+        <!-- Profile Summary -->
+        <section class="mb-12">
+          <h4
+            class="font-label-mono text-label-mono text-on-surface-variant uppercase tracking-[0.2em] mb-4 flex items-center gap-3">
+            <span class="w-8 h-[1px] bg-outline-variant"></span> Profile Summary
+          </h4>
+          <p class="text-on-surface-variant leading-relaxed font-body-md">
+            Computer Science student (BS result awaited) and full-stack, mobile, and automation developer with hands-on
+            e-commerce operations experience as an Amazon Account Manager (FBM). Builds practical software — websites,
+            Flutter and Firebase mobile apps, and Python automation tools — while understanding the business side of
+            orders, customers, pricing, and service quality. Reliable team leader and clear communicator who picks up
+            new tools quickly.
+          </p>
+        </section>
+
+        <!-- Skills from Resume -->
+        <section class="mb-12">
+          <h4
+            class="font-label-mono text-label-mono text-on-surface-variant uppercase tracking-[0.2em] mb-6 flex items-center gap-3">
+            <span class="w-8 h-[1px] bg-outline-variant"></span> Skills &amp; Competencies
+          </h4>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="resume-subcard p-4 rounded-xl">
+              <span class="text-xs font-label-mono uppercase tracking-wider text-primary font-bold block mb-2">Web
+                Development</span>
+              <p class="text-xs text-on-surface-variant leading-relaxed">HTML5, CSS3, JavaScript, Next.js, PHP,
+                WordPress, Bootstrap</p>
+            </div>
+            <div class="resume-subcard p-4 rounded-xl">
+              <span class="text-xs font-label-mono uppercase tracking-wider text-primary font-bold block mb-2">Mobile
+                Development</span>
+              <p class="text-xs text-on-surface-variant leading-relaxed">Flutter, Dart, Firebase</p>
+            </div>
+            <div class="resume-subcard p-4 rounded-xl">
+              <span class="text-xs font-label-mono uppercase tracking-wider text-primary font-bold block mb-2">Backend
+                &amp; Automation</span>
+              <p class="text-xs text-on-surface-variant leading-relaxed">Python, Node.js, Express, Selenium, Electron
+              </p>
+            </div>
+            <div class="resume-subcard p-4 rounded-xl">
+              <span
+                class="text-xs font-label-mono uppercase tracking-wider text-primary font-bold block mb-2">Databases</span>
+              <p class="text-xs text-on-surface-variant leading-relaxed">PostgreSQL (Prisma), MySQL, MongoDB, Firebase
+              </p>
+            </div>
+            <div class="resume-subcard p-4 rounded-xl">
+              <span
+                class="text-xs font-label-mono uppercase tracking-wider text-primary font-bold block mb-2">Tools</span>
+              <p class="text-xs text-on-surface-variant leading-relaxed">Git &amp; GitHub, Postman, MS Office</p>
+            </div>
+            <div class="resume-subcard p-4 rounded-xl">
+              <span class="text-xs font-label-mono uppercase tracking-wider text-primary font-bold block mb-2">Business
+                Operations</span>
+              <p class="text-xs text-on-surface-variant leading-relaxed">Amazon FBM Account Management, Order Management
+                &amp; Tracking, Customer Service, Team Leadership</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Work Experience -->
+        <section class="mb-12">
+          <h4
+            class="font-label-mono text-label-mono text-on-surface-variant uppercase tracking-[0.2em] mb-6 flex items-center gap-3">
+            <span class="w-8 h-[1px] bg-outline-variant"></span> Work Experience
+          </h4>
+          <div class="space-y-10">
+            <!-- 1. Account Manager -->
+            <div class="relative pl-6 border-l-2 border-outline-variant">
+              <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full resume-timeline-dot"></div>
+              <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-1">
+                <h5 class="font-headline-md text-headline-md text-on-background">Account Manager</h5>
+                <span class="font-label-mono text-label-mono text-primary font-semibold">2023 — Present</span>
+              </div>
+              <p class="text-on-surface font-semibold mb-3">E-Com Whizz</p>
+              <ul class="space-y-2 text-on-surface-variant list-disc pl-4 font-body-md text-sm leading-relaxed">
+                <li>Lead and mentor a team to achieve operational goals in a collaborative work environment.</li>
+                <li>Manage order placement and tracking for Amazon FBM, ensuring timely, accurate fulfillment and
+                  resolving shipment delays and discrepancies.</li>
+                <li>Respond promptly to customer inquiries and feedback, using insights to improve product offerings and
+                  service quality.</li>
+                <li>Develop and maintain shipping templates that streamline logistics and keep listings compliant with
+                  Amazon policies.</li>
+                <li>Analyze sales data and performance metrics to optimize accounts and grow revenue.</li>
+              </ul>
+            </div>
+
+            <!-- 2. Customer Care Representative -->
+            <div class="relative pl-6 border-l-2 border-outline-variant">
+              <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full resume-timeline-dot"></div>
+              <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-1">
+                <h5 class="font-headline-md text-headline-md text-on-background">Customer Care Representative</h5>
+                <span class="font-label-mono text-label-mono text-primary font-semibold">2022 — 2023</span>
+              </div>
+              <p class="text-on-surface font-semibold mb-3">MSS Logistic</p>
+              <ul class="space-y-2 text-on-surface-variant list-disc pl-4 font-body-md text-sm leading-relaxed">
+                <li>Provided friendly, efficient support across multiple channels, resolving inquiries and issues to
+                  ensure a positive customer experience.</li>
+                <li>Communicated clearly in writing and verbally, maintaining a professional manner in every
+                  interaction.</li>
+              </ul>
+            </div>
+
+            <!-- 3. Educator -->
+            <div class="relative pl-6 border-l-2 border-outline-variant">
+              <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full resume-timeline-dot"></div>
+              <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-1">
+                <h5 class="font-headline-md text-headline-md text-on-background">Educator</h5>
+                <span class="font-label-mono text-label-mono text-primary font-semibold">2021 — 2022</span>
+              </div>
+              <p class="text-on-surface font-semibold mb-3">Teaching &amp; Instruction</p>
+              <ul class="space-y-2 text-on-surface-variant list-disc pl-4 font-body-md text-sm leading-relaxed">
+                <li>Built an engaging learning environment using varied teaching methods to suit different learning
+                  styles.</li>
+                <li>Designed lesson plans and assessments aligned with educational standards and promoted critical
+                  thinking.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Education -->
+        <section class="mb-12">
+          <h4
+            class="font-label-mono text-label-mono text-on-surface-variant uppercase tracking-[0.2em] mb-6 flex items-center gap-3">
+            <span class="w-8 h-[1px] bg-outline-variant"></span> Education
+          </h4>
+          <div class="space-y-8">
+            <div class="relative pl-6 border-l-2 border-outline-variant">
+              <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full resume-timeline-dot"></div>
+              <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-1">
+                <h5 class="font-headline-md text-headline-md text-on-background">BS Computer Science</h5>
+                <span class="font-label-mono text-label-mono text-primary font-semibold">Dec 2022 — Result
+                  Awaited</span>
+              </div>
+              <p class="text-on-surface-variant text-sm">School of Advanced Business &amp; Commerce (SABAC) <br><span
+                  class="opacity-80">Affiliated with University of the Punjab</span></p>
+            </div>
+
+            <div class="relative pl-6 border-l-2 border-outline-variant">
+              <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full resume-timeline-dot"></div>
+              <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-1">
+                <h5 class="font-headline-md text-headline-md text-on-background">Intermediate (Pre-Eng.)</h5>
+                <span class="font-label-mono text-label-mono text-primary font-semibold">2019 — 2021</span>
+              </div>
+              <p class="text-on-surface-variant text-sm">Jinnah Islamia College of Commerce</p>
+            </div>
+
+            <div class="relative pl-6 border-l-2 border-outline-variant">
+              <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full resume-timeline-dot"></div>
+              <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-1">
+                <h5 class="font-headline-md text-headline-md text-on-background">Matriculation (Bio Science)</h5>
+                <span class="font-label-mono text-label-mono text-primary font-semibold">2017 — 2019</span>
+              </div>
+              <p class="text-on-surface-variant text-sm">Government High School</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Training, Certifications & Languages -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+          <section class="md:col-span-8">
+            <h4
+              class="font-label-mono text-label-mono text-on-surface-variant uppercase tracking-[0.2em] mb-6 flex items-center gap-3">
+              <span class="w-8 h-[1px] bg-outline-variant"></span> Training &amp; Certifications
+            </h4>
+            <div class="space-y-6">
+              <div class="relative pl-6 border-l-2 border-outline-variant">
+                <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full resume-timeline-dot"></div>
+                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-1">
+                  <h5 class="font-headline-md text-base text-on-background">Certificate in IT (Web &amp; App
+                    Development)</h5>
+                  <span class="font-label-mono text-xs text-primary font-semibold">Feb 2022 — Aug 2022</span>
+                </div>
+                <p class="text-on-surface-variant text-xs">NAVTTC</p>
+              </div>
+
+              <div class="relative pl-6 border-l-2 border-outline-variant">
+                <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full resume-timeline-dot"></div>
+                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-1">
+                  <h5 class="font-headline-md text-base text-on-background">Amazon Virtual Assistance</h5>
+                  <span class="font-label-mono text-xs text-primary font-semibold">Jul 2023 — Oct 2023</span>
+                </div>
+                <p class="text-on-surface-variant text-xs">DigiSkills (Virtual Course)</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="md:col-span-4">
+            <h4
+              class="font-label-mono text-label-mono text-on-surface-variant uppercase tracking-[0.2em] mb-6 flex items-center gap-3">
+              <span class="w-8 h-[1px] bg-outline-variant"></span> Languages
+            </h4>
+            <div class="space-y-3">
+              <div class="resume-subcard p-3 rounded-xl flex items-center justify-between">
+                <span class="text-sm font-semibold text-on-surface">English</span>
+                <span class="text-xs font-label-mono text-primary uppercase">Professional</span>
+              </div>
+              <div class="resume-subcard p-3 rounded-xl flex items-center justify-between">
+                <span class="text-sm font-semibold text-on-surface">Urdu</span>
+                <span class="text-xs font-label-mono text-primary uppercase">Native</span>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+    <!-- 7. Contact Section -->
+    <section class="py-section-gap px-gutter max-w-container-max mx-auto" id="contact">
+      <header class="mb-16 reveal">
+        <h2 class="font-display text-display text-on-surface mb-4">Get In Touch</h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+          Have a project in mind or looking to collaborate? Feel free to reach out. I'm always open to discussing new
+          opportunities and technical challenges.
+        </p>
+      </header>
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+        <div class="md:col-span-5 space-y-12 reveal">
+          <div class="space-y-8">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+                <span class="material-symbols-outlined">mail</span>
+              </div>
+              <div>
+                <p class="font-label-mono text-caption text-primary uppercase">Email Me</p>
+                <p class="font-headline-md text-headline-md text-on-surface">zeeshanarshad854@gmail.com</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+                <span class="material-symbols-outlined">location_on</span>
+              </div>
+              <div>
+                <p class="font-label-mono text-caption text-primary uppercase">Location</p>
+                <p class="font-headline-md text-headline-md text-on-surface">Lahore, Pakistan</p>
+              </div>
+            </div>
+          </div>
+          <div class="pt-8 border-t border-outline-variant/20">
+            <p class="font-label-mono text-caption text-primary uppercase mb-6">Social Networks</p>
+            <div class="flex flex-wrap gap-4">
+              <a class="group flex items-center gap-3 px-5 py-3 bg-surface-container rounded-lg border border-outline-variant/30 hover:border-primary/50 transition-all"
+                href="https://github.com/zeeshan8540" target="_blank" rel="noopener noreferrer">
+                <span
+                  class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">terminal</span>
+                <span class="font-body-md text-body-md text-on-surface">GitHub</span>
+              </a>
+              <a class="group flex items-center gap-3 px-5 py-3 bg-surface-container rounded-lg border border-outline-variant/30 hover:border-primary/50 transition-all"
+                href="https://www.linkedin.com/in/zeeshan-arshad-1762a332a/" target="_blank" rel="noopener noreferrer">
+                <span
+                  class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">work</span>
+                <span class="font-body-md text-body-md text-on-surface">LinkedIn</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="md:col-span-7 reveal" style="transition-delay: 200ms">
+          <form action="/api/contact" method="POST"
+            class="glass-card p-8 md:p-10 rounded-xl space-y-6" id="contactForm">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div class="space-y-2">
+                <label class="font-label-mono text-caption text-on-surface-variant uppercase ml-1" for="name">Full
+                  Name</label>
+                <input name="name"
+                  class="w-full bg-surface-dim border border-outline-variant/50 rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all font-body-md"
+                  id="name" placeholder="John Doe" required type="text" />
+              </div>
+              <div class="space-y-2">
+                <label class="font-label-mono text-caption text-on-surface-variant uppercase ml-1" for="email">Email
+                  Address</label>
+                <input name="email"
+                  class="w-full bg-surface-dim border border-outline-variant/50 rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all font-body-md"
+                  id="email" placeholder="john@example.com" required type="email" />
+              </div>
+            </div>
+            <div class="space-y-2">
+              <label class="font-label-mono text-caption text-on-surface-variant uppercase ml-1"
+                for="subject">Subject</label>
+              <select name="subject" id="subject"
+                class="w-full bg-surface-dim border border-outline-variant/50 rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all font-body-md appearance-none"
+                required>
+                <option value="">Select a subject</option>
+                <option>New Project Inquiry</option>
+                <option>Collaboration Opportunity</option>
+                <option>Hiring / Recruitment</option>
+              </select>
+            </div>
+            <div class="space-y-2">
+              <label class="font-label-mono text-caption text-on-surface-variant uppercase ml-1"
+                for="message">Message</label>
+              <textarea name="message" id="message"
+                class="w-full bg-surface-dim border border-outline-variant/50 rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all font-body-md resize-none"
+                placeholder="Tell me about your project..." required rows="5"></textarea>
+            </div>
+            <div id="contact-status" class="hidden"></div>
+            <button
+              class="shimmer-btn w-full py-4 bg-primary text-on-primary font-bold rounded-lg hover:bg-primary/90 active:scale-[0.98] transition-all flex items-center justify-center gap-2"
+              type="submit">
+              <span>Send Message</span>
+              <span class="material-symbols-outlined text-[18px]">send</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Project Details Modal -->
+  <div id="project-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-container m-4">
+      <div class="relative">
+        <div class="aspect-[16/9] w-full overflow-hidden rounded-t-3xl bg-surface-container relative">
+          <img id="modal-img" src="" alt="" class="w-full h-full object-cover block" />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent opacity-90">
+          </div>
+          <button id="modal-close-btn" type="button"
+            class="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/60 backdrop-blur-md text-white flex items-center justify-center hover:bg-black/90 transition-all border border-white/20"
+            aria-label="Close modal">
+            <span class="material-symbols-outlined text-xl">close</span>
+          </button>
+        </div>
+        <div class="p-6 sm:p-8 space-y-6">
+          <div>
+            <div id="modal-pills" class="flex flex-wrap gap-2 mb-3"></div>
+            <h3 id="modal-title" class="font-headline-lg text-headline-lg text-on-background mb-1"></h3>
+            <p id="modal-subtitle" class="font-label-mono text-caption text-primary"></p>
+          </div>
+          <div>
+            <h4 class="font-label-mono text-caption uppercase text-primary tracking-wider mb-2">Project Overview</h4>
+            <p id="modal-description" class="text-on-surface-variant leading-relaxed text-body-md"></p>
+          </div>
+          <div>
+            <h4 class="font-label-mono text-caption uppercase text-primary tracking-wider mb-3">Key Technical Highlights
+            </h4>
+            <ul id="modal-highlights" class="space-y-2 text-on-surface-variant text-body-md pl-5 list-disc"></ul>
+          </div>
+          <div id="modal-actions"
+            class="pt-5 border-t border-outline-variant/30 flex flex-wrap gap-3 justify-end items-center"></div>
         </div>
       </div>
     </div>
-  </article>
-</div>
-</section>
-<!-- 7. Resume Section -->
-<section class="py-section-gap px-gutter max-w-container-max mx-auto" id="resume">
-<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6 reveal">
-<div class="max-w-2xl">
-<h2 class="font-display text-display text-on-background mb-4">Curriculum Vitae</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant">A comprehensive overview of my professional journey, technical expertise, and academic background.</p>
-</div>
-<a class="group flex items-center gap-3 bg-surface-container-high border border-outline-variant hover:border-primary text-on-surface px-8 py-4 rounded-xl transition-all duration-300 shadow-lg" href="resume.pdf" target="_blank" rel="noopener noreferrer">
-<span class="material-symbols-outlined">download</span>
-<span class="font-bold">Download CV (PDF)</span>
-</a>
-</div>
-<div class="resume-sheet rounded-2xl overflow-hidden p-8 md:p-16 max-w-4xl mx-auto reveal">
-<header class="border-b border-outline-variant pb-10 mb-10">
-<div class="flex flex-col md:flex-row justify-between gap-8">
-<div>
-<h3 class="font-headline-lg text-headline-lg text-on-background mb-1">Zeeshan Arshad</h3>
-<p class="font-label-mono text-label-mono text-primary uppercase tracking-widest mb-4">App Support &amp; Performance Monitoring Executive</p>
-<div class="flex flex-wrap gap-4 text-on-surface-variant text-sm">
-<span class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">mail</span> zeeshanarshad854@gmail.com</span>
-<span class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">call</span> +92 324 2012454</span>
-<span class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">location_on</span> Lahore, Pakistan</span>
-<span class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">link</span> zeeshanarshad.netlify.app</span>
-</div>
-</div>
-<div class="w-24 h-24 rounded-full overflow-hidden border-2 border-outline-variant">
-<img alt="Zeeshan Arshad" class="w-full h-full object-cover object-top" src="Zeeshan.png"/>
-</div>
-</div>
-</header>
-
-<section class="mb-12">
-<h4 class="font-label-mono text-label-mono text-on-surface-variant uppercase tracking-[0.2em] mb-6 flex items-center gap-3">
-<span class="w-8 h-[1px] bg-outline-variant"></span> Profile Summary
-                    </h4>
-<p class="text-on-surface-variant leading-relaxed">
-                        Computer Science graduate and full-stack / mobile app developer (Flutter, Firebase, JavaScript) with hands-on experience monitoring app performance, resolving customer-reported technical issues, and coordinating between backend systems and end users. Able to triage whether an issue originates from the app backend, the server, or the user's device/network. Comfortable managing a live production app and supporting order-taking and marketing app operations.
-                    </p>
-</section>
-
-<section class="mb-12">
-<h4 class="font-label-mono text-label-mono text-on-surface-variant uppercase tracking-[0.2em] mb-6 flex items-center gap-3">
-<span class="w-8 h-[1px] bg-outline-variant"></span> Work Experience
-                    </h4>
-<div class="space-y-10">
-<div class="relative pl-6 border-l-2 border-outline-variant">
-<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary border-4 border-surface-container"></div>
-<div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
-<h5 class="font-headline-md text-headline-md text-on-background">Account Manager</h5>
-<span class="font-label-mono text-label-mono text-primary">2023 — PRESENT</span>
-</div>
-<p class="text-on-surface font-semibold mb-4">E-Com Whizz</p>
-<ul class="space-y-2 text-on-surface-variant list-disc pl-4 font-body-md">
-<li>Monitor day-to-day account and order performance, tracking key metrics to quickly identify irregularities or service issues.</li>
-<li>Oversee order placement and tracking end-to-end, resolving delivery delays and discrepancies reported by customers.</li>
-<li>Act as first point of contact for customer-reported issues, diagnosing whether problems stem from internal systems or external/customer-side factors before escalating.</li>
-<li>Analyze feedback and performance data to recommend and implement process improvements.</li>
-</ul>
-</div>
-
-<div class="relative pl-6 border-l-2 border-outline-variant">
-<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary border-4 border-surface-container"></div>
-<div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
-<h5 class="font-headline-md text-headline-md text-on-background">Customer Care Representative</h5>
-<span class="font-label-mono text-label-mono text-primary">2022 — 2023</span>
-</div>
-<p class="text-on-surface font-semibold mb-4">MSS Logistic</p>
-<ul class="space-y-2 text-on-surface-variant list-disc pl-4 font-body-md">
-<li>Provided prompt, friendly support across multiple channels, resolving customer inquiries and technical/service issues.</li>
-<li>Communicated clearly with customers to explain issues and next steps, maintaining a professional tone under pressure.</li>
-</ul>
-</div>
-</div>
-</section>
-
-<section class="mb-12">
-<h4 class="font-label-mono text-label-mono text-on-surface-variant uppercase tracking-[0.2em] mb-6 flex items-center gap-3">
-<span class="w-8 h-[1px] bg-outline-variant"></span> Education
-                    </h4>
-<div class="space-y-8">
-<div class="relative pl-6 border-l-2 border-outline-variant">
-<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary border-4 border-surface-container"></div>
-<div class="flex flex-col md:flex-row md:justify-between md:items-start mb-1">
-<h5 class="font-headline-md text-headline-md text-on-background">BS Computer Science</h5>
-<span class="font-label-mono text-label-mono text-primary">Dec 2022 — Result Awaited</span>
-</div>
-<p class="text-on-surface-variant">School of Advanced Business &amp; Commerce (SABAC) <br><span class="text-sm opacity-80">Affiliated with University of the Punjab</span></p>
-</div>
-
-<div class="relative pl-6 border-l-2 border-outline-variant">
-<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary border-4 border-surface-container"></div>
-<div class="flex flex-col md:flex-row md:justify-between md:items-start mb-1">
-<h5 class="font-headline-md text-headline-md text-on-background">Intermediate (Pre-Eng.)</h5>
-<span class="font-label-mono text-label-mono text-primary">2019 — 2021</span>
-</div>
-<p class="text-on-surface-variant">Jinnah Islamia College of Commerce</p>
-</div>
-
-<div class="relative pl-6 border-l-2 border-outline-variant">
-<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary border-4 border-surface-container"></div>
-<div class="flex flex-col md:flex-row md:justify-between md:items-start mb-1">
-<h5 class="font-headline-md text-headline-md text-on-background">Matriculation (Bio Science)</h5>
-<span class="font-label-mono text-label-mono text-primary">2017 — 2019</span>
-</div>
-<p class="text-on-surface-variant">Government High School</p>
-</div>
-</div>
-</section>
-
-<section class="mb-12">
-<h4 class="font-label-mono text-label-mono text-on-surface-variant uppercase tracking-[0.2em] mb-6 flex items-center gap-3">
-<span class="w-8 h-[1px] bg-outline-variant"></span> Training &amp; Certifications
-                    </h4>
-<div class="space-y-6">
-<div class="relative pl-6 border-l-2 border-outline-variant">
-<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary border-4 border-surface-container"></div>
-<div class="flex flex-col md:flex-row md:justify-between md:items-start mb-1">
-<h5 class="font-headline-md text-headline-md text-on-background">Certificate in IT (Web &amp; App Development)</h5>
-<span class="font-label-mono text-label-mono text-primary">Feb 2022 — Aug 2022</span>
-</div>
-<p class="text-on-surface-variant">NAVTTC</p>
-</div>
-
-<div class="relative pl-6 border-l-2 border-outline-variant">
-<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary border-4 border-surface-container"></div>
-<div class="flex flex-col md:flex-row md:justify-between md:items-start mb-1">
-<h5 class="font-headline-md text-headline-md text-on-background">Amazon Virtual Assistance</h5>
-<span class="font-label-mono text-label-mono text-primary">Jul 2023 — Oct 2023</span>
-</div>
-<p class="text-on-surface-variant">DigiSkills (Virtual Course)</p>
-</div>
-</div>
-</section>
-</div>
-</section>
-<!-- 7. Contact Section -->
-<section class="py-section-gap px-gutter max-w-container-max mx-auto" id="contact">
-<header class="mb-16 reveal">
-<h2 class="font-display text-display text-on-surface mb-4">Get In Touch</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
-                    Have a project in mind or looking to collaborate? Feel free to reach out. I'm always open to discussing new opportunities and technical challenges.
-                </p>
-</header>
-<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
-<div class="md:col-span-5 space-y-12 reveal">
-<div class="space-y-8">
-<div class="flex items-start gap-4">
-<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
-<span class="material-symbols-outlined">mail</span>
-</div>
-<div>
-<p class="font-label-mono text-caption text-primary uppercase">Email Me</p>
-<p class="font-headline-md text-headline-md text-on-surface">zeeshanarshad854@gmail.com</p>
-</div>
-</div>
-<div class="flex items-start gap-4">
-<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
-<span class="material-symbols-outlined">location_on</span>
-</div>
-<div>
-<p class="font-label-mono text-caption text-primary uppercase">Location</p>
-<p class="font-headline-md text-headline-md text-on-surface">Lahore, Pakistan</p>
-</div>
-</div>
-</div>
-<div class="pt-8 border-t border-outline-variant/20">
-<p class="font-label-mono text-caption text-primary uppercase mb-6">Social Networks</p>
-<div class="flex flex-wrap gap-4">
-<a class="group flex items-center gap-3 px-5 py-3 bg-surface-container rounded-lg border border-outline-variant/30 hover:border-primary/50 transition-all" href="https://github.com/zeeshan8540" target="_blank" rel="noopener noreferrer">
-<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">terminal</span>
-<span class="font-body-md text-body-md text-on-surface">GitHub</span>
-</a>
-<a class="group flex items-center gap-3 px-5 py-3 bg-surface-container rounded-lg border border-outline-variant/30 hover:border-primary/50 transition-all" href="https://www.linkedin.com/in/zeeshan-arshad-1762a332a/" target="_blank" rel="noopener noreferrer">
-<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">work</span>
-<span class="font-body-md text-body-md text-on-surface">LinkedIn</span>
-</a>
-</div>
-</div>
-</div>
-<div class="md:col-span-7 reveal" style="transition-delay: 200ms">
-<form action="https://formspree.io/f/xwvjbggz" method="POST" class="glass-card p-8 md:p-10 rounded-xl space-y-6" id="contactForm">
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-<div class="space-y-2">
-<label class="font-label-mono text-caption text-on-surface-variant uppercase ml-1" for="name">Full Name</label>
-<input name="name" class="w-full bg-surface-dim border border-outline-variant/50 rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all font-body-md" id="name" placeholder="John Doe" required type="text"/>
-</div>
-<div class="space-y-2">
-<label class="font-label-mono text-caption text-on-surface-variant uppercase ml-1" for="email">Email Address</label>
-<input name="email" class="w-full bg-surface-dim border border-outline-variant/50 rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all font-body-md" id="email" placeholder="john@example.com" required type="email"/>
-</div>
-</div>
-<div class="space-y-2">
-<label class="font-label-mono text-caption text-on-surface-variant uppercase ml-1" for="subject">Subject</label>
-<select name="subject" id="subject" class="w-full bg-surface-dim border border-outline-variant/50 rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all font-body-md appearance-none" required>
-<option value="">Select a subject</option>
-<option>New Project Inquiry</option>
-<option>Collaboration Opportunity</option>
-<option>Hiring / Recruitment</option>
-</select>
-</div>
-<div class="space-y-2">
-<label class="font-label-mono text-caption text-on-surface-variant uppercase ml-1" for="message">Message</label>
-<textarea name="message" id="message" class="w-full bg-surface-dim border border-outline-variant/50 rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all font-body-md resize-none" placeholder="Tell me about your project..." required rows="5"></textarea>
-</div>
-<button class="shimmer-btn w-full py-4 bg-primary text-on-primary font-bold rounded-lg hover:bg-primary/90 active:scale-[0.98] transition-all flex items-center justify-center gap-2" type="submit">
-<span>Send Message</span>
-<span class="material-symbols-outlined text-[18px]">send</span>
-</button>
-</form>
-</div>
-</div>
-</section>
-</main>
-<footer class="bg-surface-container border-t border-outline-variant mt-section-gap">
-<div class="flex flex-col md:flex-row justify-between items-center px-gutter py-12 gap-8 max-w-container-max mx-auto">
-<div class="space-y-4 text-center md:text-left">
-<div class="font-headline-md text-headline-md font-bold text-on-background">Zeeshan Arshad</div>
-<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">Engineered with precision. Built for the modern web.</p>
-</div>
-<div class="flex flex-col items-center md:items-end gap-6">
-<div class="flex gap-8">
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-caption text-caption opacity-80 hover:opacity-100" href="https://github.com/zeeshan8540" target="_blank" rel="noopener noreferrer">GitHub</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-caption text-caption opacity-80 hover:opacity-100" href="https://www.linkedin.com/in/zeeshan-arshad-1762a332a/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-</div>
-<p class="font-label-mono text-label-mono text-on-surface-variant">© 2026 Zeeshan Arshad. All Rights Reserved.</p>
-</div>
-</div>
-</footer>
-<script src="script.js" defer></script>
+  </div>
+  <footer class="bg-surface-container border-t border-outline-variant mt-section-gap">
+    <div
+      class="flex flex-col md:flex-row justify-between items-center px-gutter py-12 gap-8 max-w-container-max mx-auto">
+      <div class="space-y-4 text-center md:text-left">
+        <div class="font-headline-md text-headline-md font-bold text-on-background">Zeeshan Arshad</div>
+        <p class="font-body-md text-body-md text-on-surface-variant max-w-xs">Engineered with precision. Built for the
+          modern web.</p>
+      </div>
+      <div class="flex flex-col items-center md:items-end gap-6">
+        <div class="flex gap-8">
+          <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-caption text-caption opacity-80 hover:opacity-100"
+            href="https://github.com/zeeshan8540" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-caption text-caption opacity-80 hover:opacity-100"
+            href="https://www.linkedin.com/in/zeeshan-arshad-1762a332a/" target="_blank"
+            rel="noopener noreferrer">LinkedIn</a>
+        </div>
+        <p class="font-label-mono text-label-mono text-on-surface-variant">© 2026 Zeeshan Arshad. All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/script.js" defer></script>
 </body>
+
 </html>
