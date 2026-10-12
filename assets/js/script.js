@@ -310,8 +310,12 @@ if (contactForm) {
         const formData = new FormData(contactForm);
         const payload = Object.fromEntries(formData.entries());
 
+        let isSuccess = false;
+        let errorMessage = '';
+
+        // 1. First try the serverless API endpoint (Vercel or Netlify function)
         try {
-            const res = await fetch('/api/contact', {
+            const apiRes = await fetch('/api/contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -320,39 +324,71 @@ if (contactForm) {
                 body: JSON.stringify(payload)
             });
 
-            const result = await res.json().catch(() => ({}));
-
-            if (res.ok) {
-                contactForm.reset();
-                if (statusEl) {
-                    statusEl.className = 'p-4 rounded-xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-sm font-body-md block';
-                    statusEl.innerHTML = `
-                        <div class="flex items-center gap-2">
-                            <span class="material-symbols-outlined text-emerald-400 text-xl">check_circle</span>
-                            <span>Thank you! Your message has been sent successfully. I will get back to you shortly.</span>
-                        </div>
-                    `;
-                }
-            } else {
-                throw new Error(result.error || 'Server error');
+            if (apiRes.ok) {
+                isSuccess = true;
             }
-        } catch (err) {
-            console.error('Contact form submission error:', err);
+        } catch (apiErr) {
+            console.warn('/api/contact unreachable, falling back to direct Formspree...', apiErr);
+        }
+
+        // 2. Fallback to direct Formspree if /api/contact returned an error (e.g. Netlify static 400 or 404)
+        if (!isSuccess) {
+            try {
+                const directEndpoint = (contactForm.action && contactForm.action.includes('formspree.io'))
+                    ? contactForm.action
+                    : 'https://formspree.io/f/xwvjbggz';
+
+                const formspreeRes = await fetch(directEndpoint, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (formspreeRes.ok) {
+                    isSuccess = true;
+                } else {
+                    const data = await formspreeRes.json().catch(() => ({}));
+                    if (data && data.errors && data.errors.length > 0) {
+                        errorMessage = data.errors.map(err => err.message).join(', ');
+                    } else if (data && data.error) {
+                        errorMessage = data.error;
+                    }
+                }
+            } catch (formspreeErr) {
+                console.error('Direct Formspree error:', formspreeErr);
+            }
+        }
+
+        if (isSuccess) {
+            contactForm.reset();
+            if (statusEl) {
+                statusEl.className = 'p-4 rounded-xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-sm font-body-md block';
+                statusEl.innerHTML = `
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-emerald-400 text-xl">check_circle</span>
+                        <span>Thank you! Your message has been sent successfully. I will get back to you shortly.</span>
+                    </div>
+                `;
+            }
+        } else {
             if (statusEl) {
                 statusEl.className = 'p-4 rounded-xl bg-rose-500/15 border border-rose-500/30 text-rose-300 text-sm font-body-md block';
                 statusEl.innerHTML = `
                     <div class="flex items-center gap-2">
                         <span class="material-symbols-outlined text-rose-400 text-xl">error</span>
-                        <span>Could not send message automatically. Please reach out directly to <a href="mailto:zeeshanarshad854@gmail.com" class="underline text-primary font-bold">zeeshanarshad854@gmail.com</a>.</span>
+                        <span>${errorMessage || 'Could not send message automatically. Please reach out directly to <a href="mailto:zeeshanarshad854@gmail.com" class="underline text-primary font-bold">zeeshanarshad854@gmail.com</a>.'}</span>
                     </div>
                 `;
             }
-        } finally {
-            if (submitBtn) {
-                submitBtn.disabled = false;
-                submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
-                submitBtn.innerHTML = originalBtnHtml;
-            }
+        }
+
+        if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+            submitBtn.innerHTML = originalBtnHtml;
         }
     });
 }
